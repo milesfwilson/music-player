@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style/main.css">
+    <title>music-is-fun</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
+                <span class="ml-2">music-is-fun</span>
+            </a>
+        </nav>
+    </header>
+    <main class="container-fluid">
+        <!-- <section class="row">
+            <div class="col-12 bannerStyle">
+                <p>Music is Fun</p>
+            </div> -->
+        <div class="col-4 mt-2">
+            <form class="d-flex" onsubmit="app.songsController.search(event)">
+                <input type="text" class="form-control" name="query" placeholder="Search For Music" />
+                <button class="btn btn-success ml-2 " type="submit">
+                    =>
+                </button>
+            </form>
+        </div>
+        </section>
+
+        <section class="row">
+            <div class="col-4 overflow-auto">
+                <h3 class="text-center">Search Results</h3>
+                <div id="songsId" class="col-12 m-0 ">
+                    <!-- template to generate -->
+                </div>
+            </div>
+            <div class="col">
+
+                <div class="row m-0  overflow-auto justify-content-center" id="playlistId">
+                    <!-- template for playlist -->
+                </div>
+                <div class="row" id="activeSongId">
+                    <div class="row ">
+                        <div class="col-2">
+                            <img class="img-fluid" src="//placehold.it/200x200" alt="" />
+                        </div>
+
+                        <div class="col-5">
+
+                        </div>
+
+                        <div class="col-5">
+                            <audio controls>
+                                <source src="${this.preview}" type="">
+                            </audio>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="container-fluid bg-dark text-light">
+        <div class="row text-center">
+            <div class="col">
+                <p><small>Made with love by Codeworks</small></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"
+        integrity="sha256-XmdRbTre/3RulhYk/cOBUMpYlaAp2Rpo/s556u0OIKk=" crossorigin="anonymous"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
